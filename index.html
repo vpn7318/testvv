@@ -44,17 +44,13 @@
             backdrop-filter: none;
         }
         h2 {
-            font-family: 'Dancing Script', cursive;
-            font-size: clamp(2em, 5vw, 3em);
-            margin-bottom: 20px;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
-            animation: pulse 2s infinite, glow 3s ease-in-out infinite alternate;
-            background: linear-gradient(45deg, #ff6b9d, #ffb3ba);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            backdrop-filter: none;
-        }
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(2em, 5vw, 3em);
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    animation: pulse 2s infinite, glow 3s ease-in-out infinite alternate;
+}
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
