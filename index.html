@@ -60,6 +60,7 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(225,255,255,0.3);
             animation: slideIn 1s ease-out;
+            color: #ff6b9d; /* Changed question text color to pink for a romantic touch */
         }
         @keyframes slideIn {
             from { transform: translateY(-20px); opacity: 0; }
@@ -236,7 +237,7 @@
         const scoreEl = document.getElementById('score');
         const musicBtn = document.getElementById('music-btn');
         let movementInterval;
-        let audio = new Audio('https://drive.google.com/file/d/1xKv0Yo_ju89cPfRAM5BW_LraK5xW4wPk/view?usp=drivesdk'); // Placeholder romantic music URL; replace with actual
+        let audio = new Audio('https://drive.google.com/uc?export=download&id=1xKv0Yo_ju89cPfRAM5BW_LraK5xW4wPk'); // Updated to a direct download link for the audio file
         audio.loop = true;
         audio.volume = 0.3;
 
