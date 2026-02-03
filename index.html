@@ -237,13 +237,22 @@
         const scoreEl = document.getElementById('score');
         const musicBtn = document.getElementById('music-btn');
         let movementInterval;
-        let audio = new Audio('https://drive.google.com/uc?export=download&id=1xKv0Yo_ju89cPfRAM5BW_LraK5xW4wPk'); // Updated to a direct download link for the audio file
+        let audio = new Audio('https://drive.google.com/uc?export=download&id=1xKv0Yo_ju89cPfRAM5BW_LraK5xW4wPk'); // Direct download link for the audio file
         audio.loop = true;
         audio.volume = 0.3;
 
+        // Add error handling for audio loading
+        audio.addEventListener('error', () => {
+            console.error('Audio failed to load. Please check the file link and ensure it is publicly accessible.');
+            alert('Music could not be loaded. Please ensure the Google Drive file is set to public sharing.');
+        });
+
         musicBtn.addEventListener('click', () => {
             if (audio.paused) {
-                audio.play();
+                audio.play().catch(e => {
+                    console.error('Audio play failed:', e);
+                    alert('Unable to play music. This may be due to browser restrictions or file issues.');
+                });
                 musicBtn.textContent = '🔊';
             } else {
                 audio.pause();
