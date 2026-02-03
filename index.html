@@ -240,8 +240,8 @@
             },
             {
                 question: "What's the one thing I love most about you?",
-                options: ["Your smile", "Your eyes", "Your laugh", "your simplicity"],
-                correct: "your simplicity"
+                options: ["Your smile", "Your eyes", "Your laugh", "Your simplicity"],
+                correct: "Your simplicity"
             },
             {
                 question: "What's the best time you spend with me?",
@@ -301,7 +301,7 @@
         function createHeart() {
             const heart = document.createElement('div');
             heart.className = 'heart';
-            heart.textContent = '💖';
+            heart.textContent = '🥹';
             heart.style.left = Math.random() * 100 + '%';
             heart.style.animationDelay = Math.random() * 8 + 's';
             document.body.appendChild(heart);
@@ -331,7 +331,7 @@
                 buttonsEl.innerHTML = '';
                 progressEl.style.display = 'none';
                 endMessageEl.style.display = 'block';
-                scoreEl.textContent = `Your score: ${score}/${questions.length}`;
+                scoreEl.textContent = `Score: ${score}/${questions.length}`;
                 createConfetti();
                 if (movementInterval) clearInterval(movementInterval);
                 return;
